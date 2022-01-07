@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<script type="text/javascript">
+	
+		 var image;
+		 window.onload = function(){
+			    image = document.getElementById("image");
+				/*
+			    image.src = "ball1.jpg";
+				image.width = 200;
+				image.height =200;
+				*/
+				
+				
+				//src,width,height->원래 img가 갖고 있는 태그
+				//고유의 태그가 아닌 임의의 태그를 추가하고 싶을 때 .setAttribute로 접근해야함
+		
+		
+				image.setAttribute("src","ball1.jpg");
+				image.setAttribute("width", 200 );
+				image.setAttribute("height",200);
+				//image.setAttribute("index",1);
+				//<img src="ball1.jpg" id="image" width="200" height="200" index="1">
+				//원래 index속성이 없지만, 내가 임의로 부여함 
+				
+			
+		 }
+		
+		 function pro(fname) {
+			 //image.src = fname;
+			 image.setAttribute("src",fname);
+		}
+	</script>
+</head>
+<body>
+	<img src= ""  id="image">
+	<hr>
+	<button onclick="pro('ball1.jpg')" >축구공</button>
+	<button onclick="pro('cloth1.jpg')">유니폼</button>
+	<button onclick="pro('shoe1.jpg')">축구화</button>
+	<button onclick="pro('stock1.jpg')">스타킹</button>
+
+	
+</body>
+</html>

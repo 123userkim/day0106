@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<script type="text/javascript">
+	/*비동기방식->언제 서버에서 연락이 올지 모름 - > 이벤트 처리가 필요함
+	onreadyStatechange : 서버로부터 응답이 왔는지 판단하기
+	4 :  서버로부터 모든 응답이 완료됨
+	request.onreadyStatechange =function(event){
+		if(){}
+	}
+	
+	*/
+		window.onload = function() {
+			var btn = document.getElementById("btn");
+			btn.onclick = function() {
+			var request = new XMLHttpRequest();
+			request.open("get","Hello",true);
+			
+			request.onreadystatechange = function(e){
+				if(request.readyState==4){
+					document.getElementById("result").innerHTML= request.responseText; 
+				}
+			}
+			request.send();
+				
+			//서버가 응답을 하기 전에 다음의 문장을 만남
+			//비동기 방식으로 할 땐 서버로부터 응답이 완료되었을 떼
+			//다음의 문자를 만나도록 함
+			//서버로부터 응답이 완료되었는지 판별할 이벤트처리가 필요함
+			//document.getElementById("result").innerHTML= request.responseText; 
+			}
+		}
+	</script>
+</head>
+<body>
+	<!-- 서블릿을 이용한 -->
+	<input type="text"><br>
+	결과  : <span id="result"></span>
+	<hr>
+	<button id = "btn">Ajax통신</button>
+</body>
+</html>

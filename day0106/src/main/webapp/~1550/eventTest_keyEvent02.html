@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!--고전적인 버전 : 따라쓰기 -->
+	<script type="text/javascript">
+		window.onload = function () {
+		var a =	document.getElementById("a");
+		var b =	document.getElementById("b");
+		
+		a.onkeyup  = function() {
+					b.value = a.value;
+			}
+		}
+	</script>
+</head>
+<body>
+	<input type="text" id="a"><br>
+	<input type="text" id="b"><br>
+</body>
+</html>

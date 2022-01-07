@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!--엔터치면 복사하기-->
+	<script type="text/javascript">
+		window.onload = function () {
+		var a =	document.getElementById("a");
+		var b =	document.getElementById("b");		
+			a. onkeypress = function(e) {
+				if(e.keyCode == 13){
+					b.value = a.value;
+				}			 		 								
+			}
+		}
+	</script>
+</head>
+<body>
+	<input type="text" id="a" ><br>
+	<input type="text" id="b"><br>
+</body>
+</html>

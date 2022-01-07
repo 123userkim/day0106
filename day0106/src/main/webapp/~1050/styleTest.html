@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 검정 - >흰 색 그라데이션 표현 실험 -->
+	<script type="text/javascript">
+		window.onload = function () {
+			var output = "";
+			for(i=0; i <256 ; i++){
+				output += "<div></div>";
+			}			
+			//document.querySelector("body").innerHTML = output;
+			document.body.innerHTML = output;
+			
+			var divs  = document.querySelectorAll("div");
+			for(i = 0 ; i <divs.length ; i++){
+				div = divs[i];
+				div.style.height = "2px";
+				div.style.background = "rgb("+i+","+i+","+i+")"; 
+				//255:흰색 0:검정
+			}
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>
